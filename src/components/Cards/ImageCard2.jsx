@@ -24,7 +24,7 @@ export const ImageCard2 = () => (
       </p>
       <div className="mt-4">
         <a
-          href="#"
+          href="/"
           className="no-underline mr-4 text-blue-500 hover:text-blue-400"
         >
           Link 1

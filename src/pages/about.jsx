@@ -7,7 +7,7 @@ import AlertPage from '../components/AlertPage'
 import ProfileCard1 from '../components/Cards/ProfileCard1'
 import SEO from '../components/SEO'
 
-const About = () => {
+const About = ({ a, b }) => {
   return (
     <Layout>
       <SEO title="About" />

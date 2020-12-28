@@ -16,6 +16,10 @@ const navLinks = [
     linkTitle: 'Cards',
     href: '/cards',
   },
+  {
+    linkTitle: 'Test',
+    href: '/test',
+  },
 ]
 
 export default function Navbar({ siteTitle }) {
@@ -29,6 +33,8 @@ export default function Navbar({ siteTitle }) {
     setNavbarOpen(null)
   }
 
+  React.useEffect(() => {}, [navbarOpen])
+
   return (
     <>
       <nav className="bg-blueGray-700">
@@ -37,7 +43,7 @@ export default function Navbar({ siteTitle }) {
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* Mobile menu button*/}
               <button
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white focus:ring-opacity-50"
                 aria-expanded="false"
                 onClick={handleNavbarClick}
               >
@@ -92,13 +98,13 @@ export default function Navbar({ siteTitle }) {
           className={(navbarOpen ? 'lg:' : 'block ') + 'hidden'}
           onClose={handleNavbarClose}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-2 pt-2 pb-3 space-y-1 divide-y">
             {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
             {navLinks.map(({ href, linkTitle }) => (
               <Link
                 key={linkTitle}
                 to={href}
-                className="text-gray-300 hover:bg-gray-700 hover:bg-opacity-10 active:bg-gray-900 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:bg-opacity-10 active:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium"
               >
                 {linkTitle}
               </Link>

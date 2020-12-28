@@ -14,13 +14,13 @@ export const SimpleCard = () => (
     ​
     <div className="mt-4">
       <a
-        href="#"
+        href="/"
         className="no-underline mr-4 text-blue-500 hover:text-blue-400"
       >
         Link 1
       </a>
       <a
-        href="#"
+        href="/"
         className="no-underline mr-4 text-blue-500 hover:text-blue-400"
       >
         Link 2

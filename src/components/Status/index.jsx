@@ -11,6 +11,9 @@ export default () => {
   const handleMenuClick = () => {
     setMenuOpen(!openMenu)
   }
+
+  React.useEffect(() => {}, [openMenu])
+
   let details
   if (!isLoggedIn()) {
     details = (
@@ -29,20 +32,20 @@ export default () => {
       <>
         <div>
           <button
-            className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+            className="bg-gray-800 flex text-sm text-gray-400 hover:text-gray-100 hover:bg-gray-600 p-1 rounded-full focus:outline-none focus:bg:gray-700 focus:ring-1 focus:ring-offset-2 focus:ring-gray-100 focus:ring-opacity-50"
             id="user-menu"
             aria-haspopup="true"
             onClick={handleMenuClick}
           >
             <span className="sr-only">Open user menu</span>
-            <AccountIcon className="h-8 w-8" />
+            <AccountIcon className="h-6 w-6" />
           </button>
         </div>
 
         <div
           className={
             (openMenu ? '' : 'hidden ') +
-            'origin-top-right absolute right-0 mt-2 lg:w-64 rounded-md shadow-lg p-4 bg-white ring-1 ring-black ring-opacity-5'
+            'origin-top-right absolute right-0 mt-2 lg:w-64 rounded-md shadow-lg p-4 bg-white'
           }
           role="menu"
           aria-orientation="vertical"

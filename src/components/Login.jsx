@@ -32,7 +32,7 @@ const Login = () => {
     <>
       <SEO title="Login" />
       <View headerTittle="Log In">
-        <div className="shadow-lg flex flex-col-reverse sm:flex-row">
+        <div className="shadow-lg flex flex-col sm:flex-row">
           <div className="w-full bg-blue-500 p-4 text-white text-center flex flex-col justify-center ">
             <h4>Log in</h4>
             <p className="text-sm mt-2">

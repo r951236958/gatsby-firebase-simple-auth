@@ -14,6 +14,7 @@ const List = () => {
             <img
               className="w-12 h-12 rounded-full"
               src="https://source.unsplash.com/50x50/?nature"
+              alt="nature"
             />
           </div>
           <div className="flex-1 pl-2">
@@ -28,6 +29,7 @@ const List = () => {
             <img
               className="w-12 h-12 rounded-full"
               src="https://source.unsplash.com/50x50/?water"
+              alt="water"
             />
           </div>
           <div className="flex-1 pl-2">
@@ -42,6 +44,7 @@ const List = () => {
             <img
               className="w-12 h-12 rounded-full"
               src="https://source.unsplash.com/50x50/?logo"
+              alt="logo"
             />
           </div>
           <div className="flex-1 pl-2">

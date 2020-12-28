@@ -13,7 +13,7 @@ export const InfoCard2 = () => (
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
     </div>
-    <a href="#" className="no-underline">
+    <a href="/" className="no-underline">
       <div className="mt-8 p-2 bg-gray-200 text-gray-600 font-bold hover:bg-gray-300 hover:text-gray-700">
         Contact Support
       </div>
