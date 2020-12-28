@@ -1,4 +1,5 @@
 import React from 'react'
+import Alert from './Alert'
 
 const AlertPage = () => {
   return (
@@ -69,6 +70,19 @@ const AlertPage = () => {
             <p>x</p>
           </div>
         </div>
+      </div>
+      <div className="w-full my-4">
+        <Alert color="steelBlue" />
+        <Alert color="brown" />
+        <Alert color="darkgreen" />
+        <Alert color="blue" />
+        <Alert color="navyBlue" />
+        <Alert color="red" />
+        <Alert color="lightYellow" />
+        <Alert color="pink" />
+        <Alert color="teal" />
+        <Alert color="cyan" />
+        <Alert color="lightBlue" />
       </div>
     </>
   )

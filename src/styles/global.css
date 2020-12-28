@@ -31,10 +31,15 @@ body {
   margin: 0;
 }
 
-
 code {
   background: lightgrey;
   border-radius: 0.125rem;
   font-weight: bold;
   padding: 0.125rem 0.25rem;
+}
+.layout {
+  @apply mt-0;
+}
+.view {
+  margin: 2rem auto 3rem;
 }

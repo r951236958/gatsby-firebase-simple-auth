@@ -1,7 +1,7 @@
 .main {
-  @apply mt-0;
+  margin-top: 0;
 }
 
 .container {
-  padding-top: 5rem;
+  padding-top: 1rem;
 }

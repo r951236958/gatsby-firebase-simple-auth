@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ProfileCard = () => (
+export const ProfileCard1 = () => (
   <div className="bg-white shadow p-4 rounded lg:w-64">
     <div className="text-center mt-4">
       <p className="text-gray-600 font-bold">Name</p>
@@ -35,4 +35,4 @@ export const ProfileCard = () => (
   </div>
 )
 
-export default ProfileCard
+export default ProfileCard1
