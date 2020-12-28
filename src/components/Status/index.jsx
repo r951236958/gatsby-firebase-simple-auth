@@ -1,11 +1,16 @@
 import React from 'react'
-import { navigate, Link } from '@reach/router'
+import { navigate, Link } from 'gatsby'
 import { getUser, isLoggedIn, logout } from '../../utils/auth'
 import firebase from 'gatsby-plugin-firebase'
 import LoginIcon from '../SvgIcon/LoginIcon'
 import AccountIcon from '../SvgIcon/AccountIcon'
 
 export default () => {
+  const [openMenu, setMenuOpen] = React.useState(false)
+
+  const handleMenuClick = () => {
+    setMenuOpen(!openMenu)
+  }
   let details
   if (!isLoggedIn()) {
     details = (
@@ -19,11 +24,7 @@ export default () => {
     )
   } else {
     const { displayName, email } = getUser()
-    const [openMenu, setMenuOpen] = React.useState(false)
 
-    const handleMenuClick = () => {
-      setMenuOpen(!openMenu)
-    }
     details = (
       <>
         <div>

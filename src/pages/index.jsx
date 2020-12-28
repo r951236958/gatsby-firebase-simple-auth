@@ -4,8 +4,7 @@ import Layout from '../components/Layout'
 import View from '../components/View'
 //import Status from '../components/Status'
 import SEO from '../components/SEO'
-
-import Button from '../components/Button'
+//import Button from '../components/Button'
 import Popover from '../components/Popover'
 
 import GatsbyFirebaseIcon from '../components/SvgIcon/GatsbyFirebaseIcon'
