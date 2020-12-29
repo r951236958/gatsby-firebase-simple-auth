@@ -4,9 +4,11 @@
 
 # Gatsby Firebase Authentication Starter
 
-![Gatsby Firebase Authentication](/static/icons/github-icon.svg "GitHub Source")
+![Github](https://img.shields.io/badge/GitHub-10k+-yellow.svg?style=social&logo=github)
 
-[![Gatsby Firebase Authentication](/static/icons/github-icon.svg "GitHub Source")][https://github.com/marcomelilli/gatsby-firebase-simple-auth]
+<img src="/static/icons/github-icon.svg"  alt="Gatsby Firebase Authentication" width='20' height='auto'/>
+
+[Gatsby Firebase Authentication](https://github.com/marcomelilli/gatsby-firebase-simple-auth)
 
 
 This is a gatsby starter to show how an **authentication workflow** is implemented in Gatsby using [Firebase](https://firebase.google.com/) as authentication provider.
