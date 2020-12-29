@@ -1,11 +1,12 @@
-import React from 'react'
 import { Link } from 'gatsby'
-import MenuLeftIcon from '../SvgIcon/MenuLeftIcon'
-import GatsbyLogoIcon from '../SvgIcon/GatsbyLogoIcon'
-import GatsbyIcon from '../SvgIcon/GatsbyIcon'
-import NotificationsIcon from '../SvgIcon/NotificationsIcon'
-import CloseIcon from '../SvgIcon/CloseIcon'
+import React from 'react'
 import Status from '../Status'
+import CloseIcon from '../SvgIcon/CloseIcon'
+import GatsbyIcon from '../SvgIcon/GatsbyIcon'
+import GatsbyLogoIcon from '../SvgIcon/GatsbyLogoIcon'
+import MenuLeftIcon from '../SvgIcon/MenuLeftIcon'
+import NotificationsIcon from '../SvgIcon/NotificationsIcon'
+
 
 const navLinks = [
   {
