@@ -174,31 +174,112 @@ const Test = () => {
             Download
           </button>
           <div className="space-y-2">
-          <button type="button" className="hidden sm:block bg-transparent hover:bg-gray-800 text-gray-600 hover:text-white py-2 sm:py-3 px-4 border border-gray-400 hover:border-transparent rounded ml-2 sm:ml-4 focus:outline-none text-xs sm:text-sm">
-    Hidden Code</button>
-  <button type="submit" className="bg-teal-400 text-white text-sm py-3 px-4 border border-teal-400 rounded font-bold flex items-center"><i className="material-icons w-5 h-5 fill-current mr-3">forward</i>
-    Download
-  </button>
-          <OutlineButton color="teel">Button</OutlineButton>
-          <OutlineButton color="red">Button</OutlineButton>
-          <OutlineButton color="amber">Button</OutlineButton>
-          <OutlineButton color="cyan">Button</OutlineButton>
-          <OutlineButton color="rose">Button</OutlineButton>
-          <OutlineButton color="teel" icon={<i className="material-icons w-5 h-5 fill-current mr-3">forward</i>}>Button</OutlineButton>
-          <OutlineButton color="red" icon={<i className="material-icons w-5 h-5 fill-current mr-3">forward</i>}>Button</OutlineButton>
-          <OutlineButton color="amber" icon={<i className="material-icons w-5 h-5 fill-current mr-3">forward</i>}>Button</OutlineButton>
-          <OutlineButton color="cyan" icon={<i className="material-icons w-5 h-5 fill-current mr-3">forward</i>}>Button</OutlineButton>
-          <OutlineButton color="rose" icon={<i className="material-icons w-5 h-5 fill-current mr-3">forward</i>}>Button</OutlineButton>
-            <Button type="outline" color="blue" icon={<i className="material-icons">forward</i>}>
+            <button
+              type="button"
+              className="hidden sm:block bg-transparent hover:bg-gray-800 text-gray-600 hover:text-white py-2 sm:py-3 px-4 border border-gray-400 hover:border-transparent rounded ml-2 sm:ml-4 focus:outline-none text-xs sm:text-sm"
+            >
+              Hidden Code
+            </button>
+            <button
+              type="submit"
+              className="bg-teal-400 text-white text-sm py-3 px-4 border border-teal-400 rounded font-bold flex items-center"
+            >
+              <i className="material-icons w-5 h-5 fill-current mr-3">
+                forward
+              </i>
+              Download
+            </button>
+            <button className="bg-gray-400 hover:bg-grey text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+              <svg
+                className="w-4 h-4 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+              </svg>
+              <span>Download</span>
+            </button>
+            <OutlineButton color="teel">Button</OutlineButton>
+            <OutlineButton color="red">Button</OutlineButton>
+            <OutlineButton color="amber">Button</OutlineButton>
+            <OutlineButton color="cyan">Button</OutlineButton>
+            <OutlineButton color="rose">Button</OutlineButton>
+            <OutlineButton
+              color="teel"
+              icon={
+                <i className="material-icons w-5 h-5 fill-current mr-3">
+                  forward
+                </i>
+              }
+            >
+              Button
+            </OutlineButton>
+            <OutlineButton
+              color="red"
+              icon={
+                <i className="material-icons w-5 h-5 fill-current mr-3">
+                  forward
+                </i>
+              }
+            >
+              Button
+            </OutlineButton>
+            <OutlineButton
+              color="amber"
+              icon={
+                <i className="material-icons w-5 h-5 fill-current mr-3">
+                  forward
+                </i>
+              }
+            >
+              Button
+            </OutlineButton>
+            <OutlineButton
+              color="cyan"
+              icon={
+                <i className="material-icons w-5 h-5 fill-current mr-3">
+                  forward
+                </i>
+              }
+            >
+              Button
+            </OutlineButton>
+            <OutlineButton
+              color="rose"
+              icon={
+                <i className="material-icons w-5 h-5 fill-current mr-3">
+                  forward
+                </i>
+              }
+            >
+              Button
+            </OutlineButton>
+            <Button
+              type="outline"
+              color="blue"
+              icon={<i className="material-icons">forward</i>}
+            >
               Button
             </Button>
-            <Button type="outline" color="red" icon={<i className="material-icons">forward</i>}>
+            <Button
+              type="outline"
+              color="red"
+              icon={<i className="material-icons">forward</i>}
+            >
               Button
             </Button>
-            <Button type="outline" color="teal" icon={<i className="material-icons">forward</i>}>
+            <Button
+              type="outline"
+              color="teal"
+              icon={<i className="material-icons">forward</i>}
+            >
               Button
             </Button>
-            <Button type="outline" color="cyan" icon={<i className="material-icons">forward</i>}>
+            <Button
+              type="outline"
+              color="cyan"
+              icon={<i className="material-icons">forward</i>}
+            >
               Button
             </Button>
             <Button

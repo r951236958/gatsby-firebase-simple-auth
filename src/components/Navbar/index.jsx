@@ -1,3 +1,4 @@
+import { Menu } from "@headlessui/react"
 import { Link } from 'gatsby'
 import React from 'react'
 import Status from '../Status'
@@ -6,7 +7,6 @@ import GatsbyIcon from '../SvgIcon/GatsbyIcon'
 import GatsbyLogoIcon from '../SvgIcon/GatsbyLogoIcon'
 import MenuLeftIcon from '../SvgIcon/MenuLeftIcon'
 import NotificationsIcon from '../SvgIcon/NotificationsIcon'
-
 
 const navLinks = [
   {
@@ -43,6 +43,30 @@ export default function Navbar({ siteTitle }) {
           <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* Mobile menu button*/}
+              <Menu>
+            <Menu.Button>
+              <MenuLeftIcon className="block h-6 w-6" />
+            </Menu.Button>
+            <Menu.Items>
+              <div className="px-2 pt-2 pb-3 space-y-1 divide-y">
+            
+            {navLinks.map(({ href, linkTitle } ) => (
+              <Menu.Item key={linkTitle}>
+                <Link
+                  
+                      to={href}
+                  className="text-gray-300 hover:bg-gray-700 hover:bg-opacity-10 active:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium"
+                >
+                  {linkTitle}
+                </Link>
+              </Menu.Item>
+              ))}
+          
+            
+            </div>
+            
+            </Menu.Items>
+          </Menu>
               <button
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white focus:ring-opacity-50"
                 aria-expanded="false"
