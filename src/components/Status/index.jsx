@@ -1,11 +1,11 @@
-import React from 'react'
-import { navigate, Link } from 'gatsby'
-import { getUser, isLoggedIn, logout } from '../../utils/auth'
-import firebase from 'gatsby-plugin-firebase'
-import LoginIcon from '../SvgIcon/LoginIcon'
-import AccountIcon from '../SvgIcon/AccountIcon'
+import React from "react"
+import { navigate, Link } from "gatsby"
+import { getUser, isLoggedIn, logout } from "../../utils/auth"
+import firebase from "gatsby-plugin-firebase"
+import LoginIcon from "../SvgIcon/LoginIcon"
+import AccountIcon from "../SvgIcon/AccountIcon"
 
-export default () => {
+const Status = () => {
   const [openMenu, setMenuOpen] = React.useState(false)
 
   const handleMenuClick = () => {
@@ -17,10 +17,7 @@ export default () => {
   let details
   if (!isLoggedIn()) {
     details = (
-      <Link
-        className="inline-flex items-center justify-center w-10 h-10 text-gray-100 transition-colors duration-150 rounded-lg bg-gray-400 bg-opacity-10 hover:bg-gray-100 hover:bg-opacity-10 focus:shadow-outline hover:text-gray-300"
-        to="/app/login"
-      >
+      <Link className="inline-flex items-center justify-center w-10 h-10 text-gray-100 transition-colors duration-150 rounded-lg bg-gray-400 bg-opacity-10 hover:bg-gray-100 hover:bg-opacity-10 focus:shadow-outline hover:text-gray-300">
         <span className="sr-only">Login</span>
         <LoginIcon className="w-6 h-6 " />
       </Link>
@@ -44,8 +41,8 @@ export default () => {
 
         <div
           className={
-            (openMenu ? '' : 'hidden ') +
-            'origin-top-right absolute right-0 mt-2 lg:w-64 rounded-md shadow-lg p-4 bg-white'
+            (openMenu ? "" : "hidden ") +
+            "origin-top-right absolute right-0 mt-2 lg:w-64 rounded-md shadow-lg p-4 bg-white"
           }
           role="menu"
           aria-orientation="vertical"
@@ -76,7 +73,7 @@ export default () => {
               type="button"
               href="/"
               className="w-full text-center px-4 py-2 text-sm rounded border-1 border-gray-700 hover:border-red-500 hover:bg-red-500 hover:bg-opacity-10 text-gray-700 hover:text-red-700 focus:outline-none"
-              onClick={(event) => {
+              onClick={event => {
                 event.preventDefault()
                 logout(firebase).then(() => navigate(`/app/login`))
               }}
@@ -91,3 +88,5 @@ export default () => {
 
   return <div>{details}</div>
 }
+
+export default Status

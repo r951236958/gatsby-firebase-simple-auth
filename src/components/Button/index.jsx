@@ -1,21 +1,21 @@
 //import Link from 'next/link'
-import PropTypes from 'prop-types'
-import { ButtonSize, ButtonColor } from '../../utils/theme'
-import React from 'react'
-import classnames from 'classnames'
+import PropTypes from "prop-types"
+import { ButtonSize, ButtonColor } from "../../utils/theme"
+import React from "react"
+import classnames from "classnames"
 
 const Button = ({ size, variant, type, color, icon, children, ...props }) => {
   return (
     <>
       <button
         className={classnames(
-          `${icon ? `inline-flex` : `flex`}`,
+          `${icon ? `inline-flex` : ``}`,
           ButtonSize[size],
-          'items-center px-3 py-2 shadow rounded-xl',
+          "bg-transparent font-bold border-2 border-solid uppercase px-3 py-2 rounded-lg outline-none focus:outline-none mr-1 duration-500 ease-in-out -translate-y-1 hover:scale-110",
           `${
             variant === `outline`
-              ? `text-${color}-500 hover:text-${color}-400 hover:bg-${color}-100 hover:bg-opacity-10 border-2 border-${color}-500 hover:border-${color}-400`
-              : `${ButtonColor[color]}  items-center px-3 py-2 shadow rounded-xl`
+              ? `text-${color}-500 hover:text-${color}-600 border-${color}-500 hover:border-${color}-600  hover:bg-${color}-500 hover:bg-opacity-20 active:bg-${color}-400`
+              : `bg-${color}-600 hover:bg-${color}-50 hover:bg-opacity-90 border-${color}-500 hover:border-${color}-600 active:bg-${color}-600 active:border-${color}-600 text-white hover:text-${color}-600 `
           }`
         )}
         {...props}
@@ -28,13 +28,13 @@ const Button = ({ size, variant, type, color, icon, children, ...props }) => {
 }
 
 Button.defaultProps = {
-  size: 'lg',
-  type: 'default',
+  size: "sm",
+  type: "default",
 }
 
 Button.propTypes = {
   size: PropTypes.string,
-  variant: PropTypes.oneOf(['outline', 'default']),
+  variant: PropTypes.oneOf(["outline", "fill"]),
   color: PropTypes.string,
   icon: PropTypes.element,
   children: PropTypes.node,
