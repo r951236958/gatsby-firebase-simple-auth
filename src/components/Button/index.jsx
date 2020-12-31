@@ -9,9 +9,9 @@ const Button = ({ size, type, color, icon, children, ...props }) => {
     <>
       <button
         className={classnames(
-          `${icon ? `inline-flex` : ``}`,
+          `${icon ? `inline-flex items-center` : ``}`,
           ButtonSize[size],
-          "max-h-full bg-transparent font-bold border-2 border-solid uppercase px-3 py-2 rounded-lg outline-none focus:outline-none mr-1 duration-500 ease-in-out hover:scale-110",
+          "bg-transparent font-bold border-2 border-solid uppercase px-3 py-2 rounded-lg outline-none focus:outline-none mr-1 duration-500 ease-in-out hover:scale-110",
           `${
             type === `outline`
               ? `text-${color}-500 hover:text-${color}-600 border-${color}-500 hover:border-${color}-600  hover:bg-${color}-500 hover:bg-opacity-20 active:bg-${color}-400`

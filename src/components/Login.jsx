@@ -1,10 +1,10 @@
-import React from 'react'
-import { navigate } from 'gatsby'
-import View from './View'
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
-import { setUser, isLoggedIn } from '../utils/auth'
-import firebase from 'gatsby-plugin-firebase'
-import SEO from './SEO'
+import React from "react"
+import { navigate } from "gatsby"
+import View from "./View"
+import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
+import { setUser, isLoggedIn } from "../utils/auth"
+import firebase from "gatsby-plugin-firebase"
+import SEO from "./SEO"
 
 const Login = () => {
   if (isLoggedIn()) {
@@ -13,16 +13,16 @@ const Login = () => {
 
   function getUiConfig(auth) {
     return {
-      signInFlow: 'popup',
+      signInFlow: "popup",
       signInOptions: [
         auth.GoogleAuthProvider.PROVIDER_ID,
         auth.EmailAuthProvider.PROVIDER_ID,
       ],
       // signInSuccessUrl: '/app/profile',
       callbacks: {
-        signInSuccessWithAuthResult: (result) => {
+        signInSuccessWithAuthResult: result => {
           setUser(result.user)
-          navigate('/app/profile')
+          navigate("/app/profile")
         },
       },
     }
@@ -36,7 +36,7 @@ const Login = () => {
           <div className="w-full bg-blue-500 p-4 text-white text-center flex flex-col justify-center ">
             <h4>Log in</h4>
             <p className="text-sm mt-2">
-              Please sign-in to access to the private route:{' '}
+              Please sign-in to access to the private route:{" "}
             </p>
             {firebase && (
               <StyledFirebaseAuth
@@ -63,6 +63,7 @@ const Login = () => {
                     className="bg-gray-300 p-2 w-full"
                     type="text"
                     placeholder="username"
+                    disabled
                   />
                 </span>
                 <span className="flex bg-gray-300 items-center mt-2 px-3">
@@ -71,21 +72,25 @@ const Login = () => {
                     className="bg-gray-300 p-2 w-full"
                     type="text"
                     placeholder="Password"
+                    disabled
                   />
                 </span>
               </div>
               <div className="flex flex-col justify-center items-center mt-4 space-y-4">
-                <button className="bg-blue-500 hover:bg-blue-400 px-4 py-2 text-white">
+                <button
+                  className="bg-blue-500 hover:bg-blue-400 px-4 py-2 text-white"
+                  disabled
+                >
                   Create Account
                 </button>
                 <p className="text-sm text-gray-600 space-x-2">
                   Already have an account?
-                  <a
-                    href="/"
+                  <button
                     className="text-xs underline-none text-blue-400 hover:text-blue-600"
+                    disabled
                   >
                     Sign in
-                  </a>
+                  </button>
                 </p>
               </div>
             </form>

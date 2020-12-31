@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'gatsby'
-import Layout from '../components/Layout'
-import View from '../components/View'
+import React, { useEffect, useState } from "react"
+import { Link } from "gatsby"
+import Layout from "../components/Layout"
+import View from "../components/View"
 //import Status from '../components/Status'
-import SEO from '../components/SEO'
-import Button from '../components/Button'
-import Popover from '../components/Popover'
+import SEO from "../components/SEO"
+import Button from "../components/Button"
+import Popover from "../components/Popover"
+import Modal from "../components/Modal"
+import GatsbyFirebaseIcon from "../components/SvgIcon/GatsbyFirebaseIcon"
 
-import GatsbyFirebaseIcon from '../components/SvgIcon/GatsbyFirebaseIcon'
-
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const Index = ({ image }) => {
   const [count1, setCount1] = useState(0)
@@ -17,7 +17,7 @@ const Index = ({ image }) => {
   const [count3, setCount3] = useState(0)
 
   useEffect(() => {
-    console.log('count2 changed!')
+    console.log("count2 changed!")
   }, [count2])
 
   return (
@@ -25,7 +25,10 @@ const Index = ({ image }) => {
       <SEO title="Home" />
 
       <View headerTittle="Firebase Authentication Starter">
-        <GatsbyFirebaseIcon />
+        <GatsbyFirebaseIcon className="max-w-3xl mx-auto my-6" />
+
+        <Modal />
+
         <div className="flex flex-col items-center justify-between my-6 space-y-4">
           <div className="flex flex-row space-x-2">
             <div>{count1}</div>
@@ -63,7 +66,7 @@ const Index = ({ image }) => {
           <div className="grid grid-cols-1 gap-4 my-4">
             <p>
               <span role="img" aria-label="Hi">
-                👋{' '}
+                👋{" "}
               </span>
               This is a simple demo of creating dynamic pages with Gatsby that
               require <b>user authentication</b> and using <b>Firebase</b> as
@@ -72,7 +75,7 @@ const Index = ({ image }) => {
 
             <p>
               <span role="img" aria-label="Books">
-                📚{' '}
+                📚{" "}
               </span>
               It uses concepts from the
               {` `}

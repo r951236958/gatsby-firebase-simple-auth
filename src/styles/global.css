@@ -8,7 +8,7 @@
 
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap");
 
 html,
 body {
@@ -42,4 +42,54 @@ code {
 }
 .view {
   margin: 2rem auto 3rem;
+}
+
+.btn-outline {
+  @apply inline-flex items-center text-lightBlue-600 bg-transparent border-2 border-solid border-lightBlue-600 hover:border-lightBlue-700 hover:bg-lightBlue-700 hover:text-gray-100 active:bg-lightBlue-700 font-bold text-sm leading-none px-3 py-2 rounded-lg outline-none focus:outline-none transition duration-150 ease-in-out;
+}
+
+.btn {
+  @apply inline-flex items-center text-gray-100 bg-transparent border-2 border-solid border-ocean-600 hover:border-ocean-500 bg-ocean-500  hover:bg-ocean-600  active:bg-ocean-600 font-bold text-sm leading-none px-3 py-2 rounded-lg outline-none focus:outline-none transition duration-150 ease-in-out;
+}
+
+.form {
+  margin: 1rem 0;
+}
+
+.form__label {
+  display: block;
+  font-size: 67.5%;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+}
+
+.form__label + .form__label {
+  margin-top: 0.5rem;
+}
+
+.form__input {
+  display: block;
+  font-size: 1rem;
+  padding: 0.25rem;
+}
+
+.form__button {
+  background-color: rebeccapurple;
+  border: 0;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  padding: 0.25rem 1rem;
+  transition: background-color 150ms linear;
+}
+
+.form__button:hover {
+  cursor: pointer;
+}
+
+.form__button:hover,
+.form__button:active,
+.form__button:focus {
+  background-color: color(rebeccapurple lightness(-20%));
 }

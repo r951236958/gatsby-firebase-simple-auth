@@ -1,8 +1,6 @@
 import { Menu, Transition } from "@headlessui/react"
-import "alpinejs"
 import { Link } from "gatsby"
 import React from "react"
-//import { Link } from 'gatsby'
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import MenuLeftIcon from "../components/SvgIcon/MenuLeftIcon"
@@ -30,8 +28,8 @@ const Buttons = () => {
     <Layout>
       <SEO title="Buttons" />
       <View headerTittle="Button Example">
-        <div className="grid grid-cols-1 gap-6">
-          <div className="flex items-center justify-center">
+        <div className="grid lg:grid-cols-1 gap-6">
+          <div className="flex flex-col lg:flex-rowitems-center justify-center">
             <div className="m-3">
               <button className="bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                 <span className="mr-2">Send</span>
@@ -86,35 +84,34 @@ const Buttons = () => {
         <div className="bg-gray-600 my-4">
           <Menu>
             <Menu.Button>
-              
               <MenuLeftIcon className="block h-6 w-6" />
             </Menu.Button>
             <Menu.Items>
-            <Menu.Item>
-              <Link
-                to="/"
-                className="text-gray-300 hover:bg-gray-700 hover:bg-opacity-10 active:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium"
-              >
-                Home
-              </Link>
-            </Menu.Item>
-            <Menu.Item>
-              <Link
-                to="/about"
-                className="text-gray-300 hover:bg-gray-700 hover:bg-opacity-10 active:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium"
-              >
-                About
-              </Link>
-            </Menu.Item>
-            <Menu.Item>
-              <Link
-                to="/buttons"
-                className="text-gray-300 hover:bg-gray-700 hover:bg-opacity-10 active:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium"
-              >
-                Buttons
-              </Link>
-            </Menu.Item>
-           </Menu.Items>
+              <Menu.Item>
+                <Link
+                  to="/"
+                  className="text-gray-300 hover:bg-gray-700 hover:bg-opacity-10 active:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium"
+                >
+                  Home
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  to="/about"
+                  className="text-gray-300 hover:bg-gray-700 hover:bg-opacity-10 active:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium"
+                >
+                  About
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  to="/buttons"
+                  className="text-gray-300 hover:bg-gray-700 hover:bg-opacity-10 active:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium"
+                >
+                  Buttons
+                </Link>
+              </Menu.Item>
+            </Menu.Items>
           </Menu>
         </div>
         <>
@@ -341,6 +338,63 @@ const Buttons = () => {
             </div>
           </nav>
         </>
+        <div className="block">
+          <div className="flex flex-wrap flex-col">
+            <div className="flex flex-wrap">
+              <button className="bg-transparent hover:bg-gray-400 text-gray-dark font-semibold hover:text-white py-2 px-4 border border-gray-400 hover:border-transparent rounded mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-blue-400 text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue-400 hover:border-transparent rounded mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-teal-400 text-teal-dark font-semibold hover:text-white py-2 px-4 border border-teal-400 hover:border-transparent rounded mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-green-400 text-green-dark font-semibold hover:text-white py-2 px-4 border border-green-400 hover:border-transparent rounded mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-yellow-400 text-yellow-dark font-semibold hover:text-white py-2 px-4 border border-yellow-400 hover:border-transparent rounded mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-orange-400 text-orange-dark font-semibold hover:text-white py-2 px-4 border border-orange-400 hover:border-transparent rounded mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-red-400 text-red-dark font-semibold hover:text-white py-2 px-4 border border-red-400 hover:border-transparent rounded mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-pink-400 text-pink-dark font-semibold hover:text-white py-2 px-4 border border-pink-400 hover:border-transparent rounded mr-2">
+                Button
+              </button>
+            </div>
+            <div className="flex flex-wrap mt-2">
+              <button className="bg-transparent hover:bg-grey-400 text-grey-dark font-semibold hover:text-white py-2 px-4 border border-grey-400 hover:border-transparent rounded-full mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-blue-400 text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue-400 hover:border-transparent rounded-full mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-teal-400 text-teal-dark font-semibold hover:text-white py-2 px-4 border border-teal-400 hover:border-transparent rounded-full mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-green-400 text-green-dark font-semibold hover:text-white py-2 px-4 border border-green-400 hover:border-transparent rounded-full mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-yellow-400 text-yellow-dark font-semibold hover:text-white py-2 px-4 border border-yellow-400 hover:border-transparent rounded-full mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-orange-400 text-orange-dark font-semibold hover:text-white py-2 px-4 border border-orange-400 hover:border-transparent rounded-full mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-red-400 text-red-dark font-semibold hover:text-white py-2 px-4 border border-red-400 hover:border-transparent rounded-full mr-2">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-pink-400 text-pink-dark font-semibold hover:text-white py-2 px-4 border border-pink-400 hover:border-transparent rounded-full mr-2">
+                Button
+              </button>
+              <button className="btn">Button</button>
+            </div>
+          </div>
+        </div>
       </View>
     </Layout>
   )
